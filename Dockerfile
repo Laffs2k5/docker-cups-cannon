@@ -6,8 +6,12 @@
 
 FROM debian:buster-slim
 
+ARG BUILD_DATE
+
 ENV VOLUME=/config
 ENV PREFIX=/usr/local/docker
+
+LABEL org.label-schema.build-date=$BUILD_DATE
 
 # Install Packages (basic tools, cups, basic drivers, HP drivers)
 RUN apt-get update \
