@@ -40,6 +40,7 @@ RUN mkdir -p /usr/lib/cups/backend-available && \
     mv /usr/lib/cups/backend/cups-brf /usr/lib/cups/backend-available/
 
 # Add user and disable sudo password checking
+# default admin credentials will be print:print
 RUN useradd \
   --groups=sudo,lp,lpadmin \
   --create-home \
