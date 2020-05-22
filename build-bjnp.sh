@@ -17,7 +17,7 @@ apt-get update
 apt-get install -qy --no-install-recommends ${BUILD_DEPS}
 mkdir -p "${SOURCEDIR}"
 cd "${SOURCEDIR}"
-curl https://vorboss.dl.sourceforge.net/project/cups-bjnp/cups-bjnp/2.0.2/cups-bjnp-2.0.2.tar.gz | tar xz
+curl -L https://vorboss.dl.sourceforge.net/project/cups-bjnp/cups-bjnp/2.0.2/cups-bjnp-2.0.2.tar.gz | tar xz
 cd cups-bjnp-2.0.2 && ./configure --prefix=/usr
 make
 make install
